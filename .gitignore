@@ -1,0 +1,6 @@
+node_modules/
+*.log
+smoke.png
+__pycache__/
+.env
+.env.*

@@ -1,0 +1,23 @@
+{
+  "name": "neon-orb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone PipeWire audio-reactive GPU orb",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "start:wayland": "electron . --ozone-platform=wayland",
+    "start:x11": "electron . --ozone-platform=x11",
+    "start:transparent": "electron . --transparent",
+    "test": "node --test test/*.test.cjs",
+    "check": "node --check main.cjs && node --check preload.cjs && node --check src/app.js",
+    "setup": "install-electron",
+    "smoke": "electron . --smoke-test"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "electron": "44.3.0"
+  }
+}

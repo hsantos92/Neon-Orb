@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Neon Orb</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+    <header>
+      <span>◉ NEON ORB</span><button id="hide">Hide controls · H</button
+      ><button id="close" aria-label="Close">×</button>
+    </header>
+    <aside>
+      <h1>Sound, made luminous.</h1>
+      <p class="sub">GPU PARTICLE FIELD / LIVE AUDIO</p>
+      <label
+        >Audio input<select id="input">
+          <option value="">Choose microphone or system monitor</option>
+        </select></label
+      >
+      <div class="row">
+        <button id="refresh">Refresh</button><button id="listen">Listen</button
+        ><button id="stop">Stop</button>
+      </div>
+      <p id="status" role="status">Idle animation. Audio capture is off.</p>
+      <label
+        >Particles<select id="count">
+          <option value="65536">65,536 · Light</option>
+          <option value="131072" selected>131,072 · Balanced</option>
+          <option value="262144">262,144 · Ultra</option>
+          <option value="524288">524,288 · Extreme</option>
+        </select></label
+      ><label
+        >Response
+        <input
+          id="gain"
+          type="range"
+          min="0.2"
+          max="4"
+          value="1.5"
+          step="0.1" /></label
+      ><label
+        >Glow
+        <input
+          id="glow"
+          type="range"
+          min="0"
+          max="2"
+          value="0.9"
+          step="0.05" /></label
+      ><label
+        >Trails
+        <input
+          id="trail"
+          type="range"
+          min="0"
+          max="0.94"
+          value="0.78"
+          step="0.01" /></label
+      ><label
+        >Render scale<select id="scale">
+          <option value="0.75">0.75×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.5">1.5×</option>
+        </select></label
+      ><label
+        >Window<select id="mode">
+          <option value="normal">Normal</option>
+          <option value="borderless">Borderless</option>
+          <option value="transparent">Transparent · experimental</option>
+        </select></label
+      >
+      <p class="sub">
+        Drag the top bar. Super + drag anywhere.<br />H controls · Space pause ·
+        Esc show controls<br />Changing window mode stops capture.
+      </p>
+    </aside>
+    <footer>
+      <span id="stats">Starting GPU…</span><span id="beat">● BEAT</span>
+    </footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
